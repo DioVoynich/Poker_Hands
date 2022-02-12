@@ -1,1 +1,26 @@
+Approach:
 
+1. Read each line from the input file.
+2. Divide cards into 2 groups, five cards, for each player.
+3. Store each group into an array format and pass into a helper method. The method will encrypt it into a 
+String format that is preferable to be used to compare scores.
+
+3.5. 5 big ways to categoriaze patterns, using map and set. For instance, ('Combo'-'Primary value'-'Secondary value'.)
+  a. If map size is 5:
+    a.1. Royal Flash Straight Flash - Check if they are sequential and the set size is 1 and sort the card order.
+    If the last card is Ace, then it is Royal Flash. Else, it is Straight Flash.
+    a.2. Flash - If not consecutive and with set size of 1.
+    a.3. Straight - Consecutive, but set size is greater than 1.
+    a.4. Else, High Card.
+  b. One Pair - if the map size is 4.
+  c. If map size is 3:
+    c.1. Three of a Kind - If map value contains 3. 
+    c.2. Two Pairs - If map values are 2.
+  d. If Map size is 2:
+    d.1. Four of a Kind - If map value contains 4. 
+    d.2. Full House - If map values contain 3 and 2.
+
+4. Compare the scores of Player1 and Player2, and add scores for Player1 if Player1 wins.
+5. Print out the final scores of Player1, which is 376.
+
+Additionally, I learned the rule of Poker which I didn't know before I start this problem. It was a good challenge.
